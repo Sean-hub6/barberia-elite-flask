@@ -21,6 +21,9 @@
         <p>📅 Fecha: {{ r.fecha }}</p>
         <p>⏰ Hora: {{ r.hora }}</p>
         <p>💰 Precio: S/ {{ r.precio }}</p>
+        <a href="/borrar/{{ loop.index0 }}">
+        <button>🗑 Borrar</button>
+    </a>
     </div>
 
     {% endfor %}
