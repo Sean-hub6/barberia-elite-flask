@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Elite</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo barber.jpg') }}">
+            <h2>Barbería Elite</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contactos">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id = "inicio" class="hero">
+        <h1>Sistema de Reservas para Barbería</h1>
+        <p>
+            Gestiona citas y servicios de manera rápida y sencilla.
+        </p>
+    </section>
+
+
+    
+
+    
+    
+    
+    
+    <section id = "servicios" class="servicios">
+        <h2>Servicios Disponibles</h2>
+
+        <div class="cards">
+
+           <div class="card">
+    <img src="{{ url_for('static', filename='img/corte de pelo.jpg') }}">
+
+    <h3>Corte de Cabello</h3>
+
+    <p>
+        Corte clásico o moderno realizado por nuestros barberos.
+    </p>
+    <h4>S/ 25</h4>
+    <input type = "date" id="fechaCorte">
+    <input type = "time" id="horaCorte">
+
+    <button onclick="agregarReserva('Corte de Cabello', 25,'fechaCorte','horaCorte')">
+        Agregar Reserva
+    </button>
+</div>
+
+            <div class="card">
+    <img src="{{ url_for('static', filename='img/ondulacion.jpg') }}">
+
+    <h3>Ondulacion</h3>
+
+    <p>Servicio especializado para dar estilo y textura al cabello.    </p>
+    <h4>S/ 50</h4>
+    <input type = "date" id="fechaOndulacion">
+    <input type = "time" id="horaOndulacion">
+
+    <button onclick="agregarReserva('Ondulacion', 50,'fechaOndulacion','horaOndulacion')">
+        Agregar Reserva
+    </button>
+</div>
+
+            <div class="card">
+    <img src="{{ url_for('static', filename='img/decoloracion.jpg') }}">
+
+    <h3>Decoloracion</h3>
+
+    <p>
+        Cambio de color profesional con productos de alta calidad.
+    </p>
+
+    <h4>S/ 60</h4>
+    <input type = "date" id="fechaDecoloracion">
+    <input type = "time" id="horaDecolocarion">
+
+    <button onclick="agregarReserva('Decoloracion', 60, 'fechaDecoloracion', 'horaDecolocarion')">
+        Agregar Reserva
+    </button>
+</div>
+
+        </div>
+    </section>
+
+  
+<section id= "reservas" class="reservas">
+
+    <h2>Reservas Seleccionadas</h2>
+
+    <ul id="listaReservas">
+
+    </ul>
+    
+<h3>Total: S/ <span id="total">0</span></h3>
+    <button onclick="limpiarReservas()">
+        Borrar Todo
+    </button>
+
+
+</section>
+  
+
+<footer>
+    <section id="contactos" class="contacto">
+    <h2>Contacto</h2>
+    <p>Teléfono: 999 999 999</p>
+    <p>Email: barberiaelite@gmail.com</p>
+</section>    
+    <p>© 2026 Barbería Elite</p>
+    </footer>
+
+    
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
