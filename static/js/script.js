@@ -3,25 +3,25 @@
 let total = 0;
 
 function agregarReserva(servicio, precio, idFecha, idHora){
+    const fecha = document.getElementById(idFecha).value;
+    const hora = document.getElementById(idHora).value;
 
-    let fecha = document.getElementById(idFecha).value;
-    let hora = document.getElementById(idHora).value;
+    const reserva = {
+        servicio: servicio,
+        precio: precio,
+        fecha: fecha,
+        hora: hora
+    };
 
-    let lista = document.getElementById("listaReservas");
+    fetch("/api/reserva", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(reserva)
+    });
 
-    let item = document.createElement("li");
-
-    item.textContent =
-        servicio +
-        " | Fecha: " + fecha +
-        " | Hora: " + hora +
-        " | S/ " + precio;
-
-    lista.appendChild(item);
-
-    total += precio;
-
-    document.getElementById("total").textContent = total;
+    alert("Reserva enviada al sistema 💈");
 }
 
 function limpiarReservas(){
