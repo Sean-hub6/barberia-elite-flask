@@ -1,22 +1,32 @@
-<h1>💈 Dashboard Barbería</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>💈 Dashboard Barbería</h1>
 
-<h3>Total reservas: {{ total }}</h3>
-<h3>Ingresos: S/ {{ ingresos }}</h3>
+<h2>Total reservas: {{ total }}</h2>
+<h2>Ingresos: S/ {{ ingresos }}</h2>
 
-<table border="1">
-    <tr>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Servicio</th>
-        <th>Precio</th>
-    </tr>
-
+<div class="grid">
     {% for r in reservas %}
-    <tr>
-        <td>{{ r.fecha }}</td>
-        <td>{{ r.hora }}</td>
-        <td>{{ r.servicio }}</td>
-        <td>S/ {{ r.precio }}</td>
-    </tr>
+
+    <div class="card">
+        <h3>✂️ {{ r.servicio }}</h3>
+
+        <p>📅 Fecha: {{ r.fecha }}</p>
+        <p>⏰ Hora: {{ r.hora }}</p>
+        <p>💰 Precio: S/ {{ r.precio }}</p>
+    </div>
+
     {% endfor %}
-</table>
+</div>
+    
+</body>
+</html>
+
+
