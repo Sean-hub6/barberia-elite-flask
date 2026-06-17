@@ -125,7 +125,7 @@
     margin-top:15px;
     padding:10px 20px;
     border:none;
-    background:#222;
+    background:#545454;
     color:white;
     border-radius:5px;
     cursor:pointer;
@@ -172,7 +172,7 @@
 }
 
 .card {
-    background: #1e1e1e;
+    background: #515151;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
