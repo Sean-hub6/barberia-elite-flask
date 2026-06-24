@@ -214,3 +214,21 @@
     padding: 20px;
     border-radius: 15px;
 }
+.productos{
+    padding: 50px;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.productos h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+    font-size: 2rem;
+}
+.productos .card button{
+    background: #28a745;
+}
+
+.productos .card button:hover{
+    background: #218838;
+}

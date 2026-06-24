@@ -9,9 +9,6 @@
 <body>
     <h1>💈 Dashboard Barbería</h1>
 
-<h2>Total reservas: {{ total }}</h2>
-<h2>Ingresos: S/ {{ ingresos }}</h2>
-
 <div class="dashboard-cards">
 
     <div class="stat-card">
@@ -30,12 +27,14 @@
     </div>
 
     <div class="stat-card">
-        <h3>Productos</h3>
+        <h3>Ventas Productos</h3>
         <p>{{ productos }}</p>
     </div>
 
 </div>
-
+<a href="/">
+    <button>⬅ Volver a Reservas</button>
+</a>
 <div class="grid">
     {% for r in reservas %}
 

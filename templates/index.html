@@ -28,6 +28,7 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#reservas">Reservas</a></li>
                 <li><a href="#contactos">Contacto</a></li>
+                <li><a href="#productos">Productos</a></li>
             </ul>
         </nav>
     </header>
@@ -103,6 +104,65 @@
 
         </div>
     </section>
+
+
+<section id="productos" class="productos">
+
+    <h2>Productos de Barbería</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/cera.jpg') }}">
+
+            <h3>Cera para Cabello</h3>
+
+            <p>
+                Fijación fuerte para peinados modernos.
+            </p>
+
+            <h4>S/ 20</h4>
+
+            <button onclick="agregarReserva('Cera para Cabello', 20)">
+                Comprar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/shampoo.jpg') }}">
+
+            <h3>Shampoo Premium</h3>
+
+            <p>
+                Shampoo profesional para el cuidado capilar.
+            </p>
+
+            <h4>S/ 35</h4>
+
+            <button onclick="agregarReserva('Shampoo Premium', 35)">
+                Comprar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/aceite.jpg') }}">
+
+            <h3>Aceite para Barba</h3>
+
+            <p>
+                Hidratación y brillo para barba y bigote.
+            </p>
+
+            <h4>S/ 25</h4>
+
+            <button onclick="agregarReserva('Aceite para Barba', 25)">
+                Comprar
+            </button>
+        </div>
+
+    </div>
+
+</section>
 
   
 
