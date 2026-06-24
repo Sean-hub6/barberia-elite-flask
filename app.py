@@ -19,7 +19,7 @@ def dashboard():
     productos = 42
 
     dias = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"]
-    ventas = [10,3,7,5,12,8,2]
+    ventas = [10,6,6,9,12,10,7]
 
     return render_template(
         "dashboard.html",
