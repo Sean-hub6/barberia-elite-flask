@@ -206,7 +206,9 @@
     font-weight:bold;
 }
 #grafico{
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px !important;
     margin: 30px auto;
     background: white;
     padding: 20px;
