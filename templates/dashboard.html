@@ -39,8 +39,8 @@
     {% for r in reservas %}
 
     <div class="card">
+        <h3>👤 {{ r.nombre }}</h3>
         <h3>✂️ {{ r.servicio }}</h3>
-
         <p>📅 Fecha: {{ r.fecha }}</p>
         <p>⏰ Hora: {{ r.hora }}</p>
         <p>💰 Precio: S/ {{ r.precio }}</p>

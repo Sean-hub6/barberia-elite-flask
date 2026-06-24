@@ -39,6 +39,7 @@ def api_reserva():
     data = request.json
 
     reservas.append({
+        "nombre": data["nombre"],
         "fecha": data["fecha"],
         "hora": data["hora"],
         "servicio": data["servicio"],
