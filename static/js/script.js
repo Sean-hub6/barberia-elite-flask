@@ -32,7 +32,7 @@ function agregarReserva(servicio, precio, idFecha = null, idHora = null){
     })
     .then(() => {
         alert("Reserva enviada al sistema 💈");
-        window.location.href = "/dashboard";
+        
     });
 }
 
