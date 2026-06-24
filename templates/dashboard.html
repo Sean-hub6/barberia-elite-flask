@@ -12,6 +12,30 @@
 <h2>Total reservas: {{ total }}</h2>
 <h2>Ingresos: S/ {{ ingresos }}</h2>
 
+<div class="dashboard-cards">
+
+    <div class="stat-card">
+        <h3>Clientes</h3>
+        <p>{{ clientes }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Reservas</h3>
+        <p>{{ total }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Ingresos</h3>
+        <p>S/ {{ ingresos }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Productos</h3>
+        <p>{{ productos }}</p>
+    </div>
+
+</div>
+
 <div class="grid">
     {% for r in reservas %}
 
@@ -28,6 +52,36 @@
 
     {% endfor %}
 </div>
+
+<h2>Clientes por Semana</h2>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="grafico"></canvas>
+
+
+<script>
+const ctx = document.getElementById("grafico");
+
+new Chart(ctx, {
+    type: "bar",
+    data: {
+       labels: ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"],
+        datasets: [{
+            label: "Clientes por día",
+            data: [10,3,7,5,12,8,2],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
     
 </body>
 </html>

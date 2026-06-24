@@ -11,14 +11,25 @@ def inicio():
 
 @app.route("/dashboard")
 def dashboard():
+
     total = len(reservas)
     ingresos = sum(r["precio"] for r in reservas)
+
+    clientes = 25
+    productos = 42
+
+    dias = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"]
+    ventas = [10,3,7,5,12,8,2]
 
     return render_template(
         "dashboard.html",
         reservas=reservas,
         total=total,
-        ingresos=ingresos
+        ingresos=ingresos,
+        clientes=clientes,
+        productos=productos,
+        dias=dias,
+        ventas=ventas
     )
 
 
