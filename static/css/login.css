@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#111,#2b1608,#111);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+    width:380px;
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.login-card h1{
+    color:#111;
+    margin-bottom:10px;
+}
+
+.login-card p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.login-card input{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.login-card button{
+    width:100%;
+    padding:13px;
+    border:none;
+    background:#c47a22;
+    color:white;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.login-card button:hover{
+    background:#a86418;
+}
+
+.registro-link{
+    margin-top:20px;
+    color:#333;
+}
+
+.registro-link a{
+    color:#c47a22;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.error{
+    color:red;
+    margin-top:15px;
+}

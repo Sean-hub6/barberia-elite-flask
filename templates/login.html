@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Barbería Elite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>💈 Barbería Elite</h1>
+            <p>Sistema Web de Reservas y Gestión</p>
+
+            <form method="POST">
+
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+                <input type="password" name="password" placeholder="Contraseña" required>
+
+                <button type="submit">Iniciar sesión</button>
+
+            </form>
+
+            {% if mensaje %}
+                <p class="error">{{ mensaje }}</p>
+            {% endif %}
+
+            <div class="registro-link">
+                ¿No tienes cuenta?
+                <a href="/registro">Regístrate aquí</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
