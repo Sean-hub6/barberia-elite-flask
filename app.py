@@ -20,7 +20,7 @@ def dashboard():
     total = len(reservas)
     ingresos = sum(r["precio"] for r in reservas)
 
-    clientes = 25
+    clientes = len(usuarios)
     productos = 42
 
     dias = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"]
