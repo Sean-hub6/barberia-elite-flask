@@ -17,6 +17,8 @@ def inicio():
 @app.route("/dashboard")
 def dashboard():
 
+    if "usuario" not in session:
+        return redirect("/login")
     total = len(reservas)
     ingresos = sum(r["precio"] for r in reservas)
 
@@ -44,7 +46,7 @@ def api_reserva():
     data = request.json
 
     reservas.append({
-        "nombre": data["nombre"],
+        "nombre": session["usuario"],
         "fecha": data["fecha"],
         "hora": data["hora"],
         "servicio": data["servicio"],
